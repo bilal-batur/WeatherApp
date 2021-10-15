@@ -10,25 +10,32 @@
 
 
     <TextView
-
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textCity"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/temper"
-        android:text="@{temper.temperature}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-
+        android:id="@+id/cityText"
         android:textSize="20sp"/>
 
+    <ImageView
+        android:id="@+id/iconWeather"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
 
 
-
-
-
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityTemp"
+        android:textSize="20sp"/>
+    
+    <ListView
+        android:layout_marginTop="50dp"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_item">
+    </ListView>
 
 </LinearLayout>

@@ -1,22 +1,12 @@
 package com.bilalbatur.weatherapp.ViewModel
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import com.bilalbatur.weatherapp.Interface.WeatherApiService
-import com.bilalbatur.weatherapp.Interface.WeatherService
-import com.bilalbatur.weatherapp.Model.Weather
-import com.bilalbatur.weatherapp.Model.WeatherResponse
 import com.bilalbatur.weatherapp.MyModel.LocationData
 import com.bilalbatur.weatherapp.MyModel.UserData
 import com.bilalbatur.weatherapp.View.WeatherPage
@@ -24,15 +14,6 @@ import com.bilalbatur.weatherapp.databinding.ActivityMainBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.tasks.Task
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.observers.DisposableSingleObserver
-import io.reactivex.schedulers.Schedulers
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import java.util.EnumSet.of
 
@@ -40,7 +21,6 @@ import java.util.EnumSet.of
 class MainActivity : AppCompatActivity() {
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private lateinit var binding: ActivityMainBinding;
-
 
 
     private val textInputEditText: String
@@ -100,7 +80,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
 
 
 }
