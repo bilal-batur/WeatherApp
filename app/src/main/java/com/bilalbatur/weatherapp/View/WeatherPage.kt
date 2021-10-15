@@ -69,8 +69,8 @@ class WeatherPage : AppCompatActivity() {
 
 
                 var list = mutableListOf<WeatherView>()
-                if (currentDay != 6)
-                    for (i in (currentDay + 1)..7)
+                
+                    for (i in (currentDay)..7)
                         list.add(
                             WeatherView(
                                 "${weekDay[i - 1]}",
